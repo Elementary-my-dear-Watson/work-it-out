@@ -14,8 +14,6 @@ VALUES
 ('Dr.', 'Wong', 12, 12),
 ('Gene', 'Vagina', 13, 13)
 
-SELECT * FROM Employee;
-
 INSERT INTO Department (name)
 VALUES
 ('Engineering'),

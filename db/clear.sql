@@ -1,0 +1,4 @@
+-- Drop tables if they already exist
+DROP TABLE IF EXISTS Employee CASCADE;
+DROP TABLE IF EXISTS Role CASCADE;
+DROP TABLE IF EXISTS Department CASCADE;
