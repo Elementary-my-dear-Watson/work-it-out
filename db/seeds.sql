@@ -15,3 +15,15 @@ VALUES
 ('Gene', 'Vagina', 13, 13)
 
 SELECT * FROM Employee;
+
+INSERT INTO Department (name)
+VALUES
+('Engineering'),
+('Product'),
+('Sales');
+
+INSERT INTO Role (title)
+VALUES
+('Software Engneer'),
+('Product Manager'),
+('Sales Associate');
