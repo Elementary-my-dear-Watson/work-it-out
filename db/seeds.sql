@@ -1,48 +1,28 @@
--- Truncate the tables to remove existing data (faster than DELETE)
-TRUNCATE TABLE Employee, Role, Department RESTART IDENTITY CASCADE;
-
--- Insert seed data for Department table
+-- Insert departments
 INSERT INTO Department (name)
 VALUES
 ('Engineering'),
 ('Product'),
 ('Sales');
 
--- Insert seed data for Role table
+-- Insert roles
 INSERT INTO Role (title, salary, department_id)
 VALUES
-('Software Engineer', 90000, 1),  -- Associate with Engineering
-('Product Manager', 80000, 2),    -- Associate with Product
-('Sales Associate', 60000, 3);     -- Associate with Sales
+('Software Engineer', 90000, 1),  -- Engineering role
+('Product Manager', 80000, 2),    -- Product role
+('Sales Associate', 60000, 3);     -- Sales role
 
--- Insert seed data for Employee table
--- Assuming the following hierarchy where all employees report to managers:
--- 1: Morty (Software Engineer) - Manager: Rick
--- 2: Rick (Product Manager) - Manager: None (top level)
--- 3: Jerry (Sales Associate) - Manager: None (top level)
--- 4: Beth (Software Engineer) - Manager: Morty
--- 5: Summer (Product Manager) - Manager: Rick
--- 6: Bird (Sales Associate) - Manager: Jerry
--- 7: Krombopulos (Software Engineer) - Manager: Morty
--- 8: Wayne (Product Manager) - Manager: Rick
--- 9: Cornvelious (Sales Associate) - Manager: Jerry
--- 10: Shrimpy (Software Engineer) - Manager: Morty
--- 11: Scary (Product Manager) - Manager: Rick
--- 12: Dr. Wong (Sales Associate) - Manager: Jerry
--- 13: Gene (Software Engineer) - Manager: Morty
-
+-- Insert employees
 INSERT INTO Employee (first_name, last_name, role_id, manager_id)
 VALUES
-('Morty', 'Smith', 1, 2),          -- Morty reports to Rick (manager_id: 2)
-('Rick', 'Sanchez', 2, 2),         -- Rick is a Product Manager, but also a top-level employee
-('Jerry', 'Smith', 3, 2),          -- Jerry reports to Rick
-('Beth', 'Smith', 1, 1),           -- Beth reports to Morty
-('Summer', 'Smith', 2, 2),         -- Summer reports to Rick
-('Bird', 'Person', 3, 3),          -- Bird reports to Jerry
-('Krombopulos', 'Michael', 1, 1),  -- Krombopulos reports to Morty
-('Wayne', 'Poopybutthole', 2, 2),  -- Wayne reports to Rick
-('Cornvelious', 'Daniel', 3, 3),   -- Cornvelious reports to Jerry
-('Shrimpy', 'Pibbles', 1, 1),      -- Shrimpy reports to Morty
-('Scary', 'Terry', 2, 2),          -- Scary reports to Rick
-('Dr.', 'Wong', 3, 3),             -- Dr. Wong reports to Jerry
-('Gene', 'Vagina', 1, 1);          -- Gene reports to Morty
+('Rick', 'Sanchez', 1, NULL),      -- Rick as Software Engineer, manager of Morty, Bird Person, and Krombopulos
+('Morty', 'Smith', 1, 1),          -- Morty Software Engineer
+('Beth', 'Smith', 2, NULL),         -- Beth as Product Manager, manager of Summer, Jerry, Mr. Poopybutthole, and Shrimpy Pibbles
+('Summer', 'Smith', 3, 2),          -- Summer as Sales Associate
+('Jerry', 'Smith', 3, 2),           -- Jerry as Sales Associate
+('Bird', 'Person', 1, 1),           -- Bird Person as Software Engineer
+('Krombopulos', 'Michael', 1, 1),   -- Krombopulos as Software Engineer
+('Mr.', 'Poopybutthole', 3, 2),      -- Mr. Poopybutthole as Sales Associate
+('Shrimpy', 'Pibbles', 3, 2),        -- Shrimpy Pibbles as Sales Associate
+('Dr.', 'Wong', 2, NULL),            -- Dr. Wong as Product Manager (no manager assigned)
+('Principal', 'Vagina', 2, NULL);    -- Principal Vagina as Product Manager (no manager assigned)
