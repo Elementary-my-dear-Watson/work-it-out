@@ -21,7 +21,7 @@ CREATE TABLE Employee (
     first_name VARCHAR(30) NOT NULL,      -- To hold employee first name
     last_name VARCHAR(30) NOT NULL,       -- To hold employee last name
     role_id INTEGER NOT NULL,              -- To hold reference to employee role
-    manager_id INTEGER,                    -- To hold reference to another employee (manager)
+    manager_id INTEGER NOT NULL,                    -- To hold reference to another employee (manager)
     FOREIGN KEY (role_id) REFERENCES Role(id),          -- Foreign key referencing Role
     FOREIGN KEY (manager_id) REFERENCES Employee(id) ON DELETE SET NULL  -- Foreign key referencing Employee
 );
