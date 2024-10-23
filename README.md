@@ -43,6 +43,8 @@ The application meets the following acceptance criteria:
 
 ## Walkthrough Video
 
+For a demonstration of the application's features, you can watch the walkthrough video below:
+[![Watch the video](./img/thumbnail.jpg)](https://drive.google.com/file/d/1z9iVs0zZjErLjPuewxgk_WNtBkE0Ln-1/view?usp=drive_link)
 
 ## Installation
 
