@@ -65,14 +65,17 @@ Set up Enviroment Variables (.env)
 
 ## Usage
 
-bash
--npm start
+```bash
+npm start
+```
 
 Clone the Repository
 
-bash
--git clone git@github.com:Elementary-my-dear-Watson/work-it-out.git
+```bash
+git clone git@github.com:Elementary-my-dear-Watson/work-it-out.git
+
 cd work-it-out
+```
 
 ## Contibuting 
 
