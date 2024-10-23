@@ -57,11 +57,11 @@ Install Dependencies
 
 Set up Enviroment Variables (.env)
 
--DB_USER=your_database_username
--DB_HOST=localhost
--DB_NAME=your_database_name
--DB_PASS=your_database_password
--DB_PORT=5432
+- DB_USER=your_database_username
+- DB_HOST=localhost
+- DB_NAME=your_database_name
+- DB_PASS=your_database_password
+- DB_PORT=5432
 
 ## Usage
 
