@@ -1,11 +1,8 @@
 # work-it-out
-This repo is for a business owner who wants to be organized by managing the departments, roles, and employees in there company to help plan their business.
-
-# Employee Tracker
 
 ## Overview
 
-The **Employee Tracker** is a command-line application designed to help business owners manage their employee database effectively. Built using Node.js, Inquirer, and PostgreSQL, this application allows users to view and manage departments, roles, and employees within their company, facilitating better organization and planning.
+**Work it out** is a command-line application designed to help business owners manage their employee database effectively. Built using Node.js, Inquirer, and PostgreSQL, this application allows users to view and manage departments, roles, and employees within their company, facilitating better organization and planning.
 
 ## User Story
 
@@ -44,17 +41,62 @@ The application meets the following acceptance criteria:
 - **Inquirer**: A library for building interactive command-line user interfaces.
 - **PostgreSQL**: Relational database management system for storing employee data.
 
-## Installation
+## Walkthrough Video
 
-### Prerequisites
+
+## Installation
 
 Make sure you have the following installed:
 
 - [Node.js](https://nodejs.org/en/download/) (version X.X.X or higher)
 - [PostgreSQL](https://www.postgresql.org/download/) (version X.X.X or higher)
 
-### Clone the Repository
+Install Dependencies
 
-```bash
-git clone https://github.com/your-username/employee-tracker.git
-cd employee-tracker
+-npm install
+
+Set up Enviroment Variables (.env)
+
+-DB_USER=your_database_username
+-DB_HOST=localhost
+-DB_NAME=your_database_name
+-DB_PASS=your_database_password
+-DB_PORT=5432
+
+## Usage
+
+bash
+-npm start
+
+Clone the Repository
+
+bash
+-git clone git@github.com:Elementary-my-dear-Watson/work-it-out.git
+cd work-it-out
+
+## Contibuting 
+
+Contributions are welcome! If you would like to contribute, please follow these steps:
+- Fork the repository.
+- Create a new branch (git checkout -b feature/YourFeature).
+- Make your changes and commit them (git commit -m 'Add some feature').
+- Push to the branch (git push origin feature/YourFeature).
+- Open a pull request.
+
+## License 
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Acknowledgements
+
+Inquirer.js - For creating interactive command-line interfaces.
+pg - For PostgreSQL database interactions.
+
+Special Thanks
+I would like to extend my gratitude to Jacob Watson, and Nick S. for their invaluable support throughout this project. Their expertise in helping with debugging and problem solving made a significant difference.
+## Contact
+
+For questions or inquiries, please contact:
+
+Martha Watson - marthacdenzer@gmail.com
+GitHub - https://github.com/Elementary-my-dear-Watson
